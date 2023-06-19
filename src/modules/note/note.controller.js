@@ -13,10 +13,11 @@ export const addNote = async (req, res, next) => {
 }
 //============================================================= get data 
 export const getNote = async (req, res, next) => {
-        if (!await noteModel.findOne({ createdBy: req.user.id })) return next(new Error("fail in user id"))
+       
+        if (!await noteModel.findOne({ createdBy: req.user._id })) return next(new Error("note empty"))
         const note = await noteModel.find({ createdBy: req.user.id })
-        if (note.length < 0) return next(new Error("note is empty"))
-        res.json({ message: "success", note })
+        // if (note.length < 0) return next(new Error("note is empty"))
+       return res.json({ message: "success", note })
 
 }
 //============================================================= delete data 
