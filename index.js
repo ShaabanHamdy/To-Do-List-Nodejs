@@ -10,9 +10,9 @@ const app = express()
 app.use(express.json({}))
 app.use(cors({}))
 
-setInterval(function() {
- console.log("Hello");   
-  }, 10000);
+// setInterval(function() {
+//  console.log("Hello");   
+//   }, 10000);
 
 //==============================
 const port = process.env.PORT || 3001
