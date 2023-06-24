@@ -26,7 +26,7 @@ export const signup = joi.object({
 //==========================
 export const login = joi.object({
     
-    password: joi.string().min(8).messages({
+    password: joi.string().min(4).messages({
         "string.pattern.base": "password must to be contain min 8 letters capital and small  and spacial characters "
     }).required(),
 
