@@ -8,7 +8,7 @@ import {globalErrorHandling} from './src/utils/errorHandling.js'
 config({ path: './Config/secret.env' })
 const app = express()
 app.use(express.json({}))
-app.use(cors({}))
+app.use(cors())
 
 //==============================
 const port = process.env.PORT || 3001
