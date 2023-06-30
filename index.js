@@ -5,13 +5,13 @@ import cors from 'cors'
 import noteRouter from './src/modules/note/note.route.js'
 import userRouter from './src/modules/user/user.route.js'
 import {globalErrorHandling} from './src/utils/errorHandling.js'
-config()
 const app = express()
 app.use(express.json({}))
 app.use(cors())
+config({path:"./DB/secret.env"})
 
 //==============================
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 5000
 ConnectionDB()
 
 app.use("/note", noteRouter)
