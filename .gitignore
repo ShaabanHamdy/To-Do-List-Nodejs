@@ -1,2 +1,2 @@
 /node_modules
-/DB/secret.env
+./DB/secret.env
