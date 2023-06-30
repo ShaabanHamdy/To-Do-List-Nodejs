@@ -5,7 +5,7 @@ import cors from 'cors'
 import noteRouter from './src/modules/note/note.route.js'
 import userRouter from './src/modules/user/user.route.js'
 import {globalErrorHandling} from './src/utils/errorHandling.js'
-config({ path: './Config/secret.env' })
+config()
 const app = express()
 app.use(express.json({}))
 app.use(cors())
