@@ -1,7 +1,5 @@
 import { Router } from "express";
 import * as controllers from './note.controller.js'
-import * as validators from './note.validation.js'
-import { validationMiddle } from "../../middleWare/validation.middle.js";
 import { asyncHandler } from "../../utils/errorHandling.js";
 import auth from "../../middleWare/auth.js";
 const router = Router()
