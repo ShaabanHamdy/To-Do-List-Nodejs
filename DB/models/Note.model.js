@@ -4,11 +4,11 @@ import mongoose, { Schema, model } from "mongoose";
 
 const noteSchema = Schema({
     title: {
-        type: String, required: [true, "title is required"]
+        type: String
     },
 
     description: {
-        type: String, required: [true, "description is required"]
+        type: String
     },
     createdBy: {
         type: Schema.Types.ObjectId,
