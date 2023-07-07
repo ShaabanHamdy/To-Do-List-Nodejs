@@ -6,7 +6,7 @@ import { asyncHandler } from "../../utils/errorHandling.js";
 import auth from "../../middleWare/auth.js";
 const router = Router()
 
-router.post("/addNote",auth(), validationMiddle(validators.crateNote),asyncHandler(controllers.addNote))
+router.post("/addNote",auth(),asyncHandler(controllers.addNote))
 //========================================================================================
 
 router.get("/getNote" ,auth(), asyncHandler(controllers.getNote))
